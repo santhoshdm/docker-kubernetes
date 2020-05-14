@@ -10,11 +10,7 @@ before_install:
   - curl https://sdk.cloud.google.com | bash > /dev/null;
   - source $HOME/google-cloud-sdk/path.bash.inc
   - gcloud components update kubectl
-  #- gcloud auth revoke
   - gcloud auth activate-service-account --key-file service-account.json
-#  - export GOOGLE_APPLICATION_CREDENTIALS="service-account.json"
-#  - gcloud config set container/use_client_certificate True
-  #- gcloud services enable container.googleapis.com
   - gcloud config set project react-kubernetes-cluster
   - gcloud config set compute/zone us-central1-c
   - gcloud container clusters get-credentials multi-cluster
@@ -35,4 +31,4 @@ notifications:
     on_success: always
     on_failure: always
     rooms:
-      - secure: cu+7IgGgX98LRJYjdMq3WdWzo2iwZcGEv2jrlxBbaH58FOpSHEl4yRLT+hj5TDwRd1gTGmPPah5G48osp1TfTtjfzVx79GpueDKpoYPp3aYIDBLNGLszFKvNUqmCl2eVNe7xLhp5O5m9UKqPk34Z6Q2TaPXK7DtOHOvHJVZrS/NXw6nbG7TSILmkcUT6EvypoP27vTBoSo2WZDcHlVGRGBG7+XhogvjjUJ9AeJujeY7D2vcKhFoNaWcDfIKLKaa2lK/rTix1c2LORPag7FMZlnDqGEG20B7cGbuMu3Av2nDhsCOwC0Kt0FEY7sOF/ZU6Ai1BGUNdTPPRfHtO6SYe5UVXh6eaPrepoXN0Was4CIqhulCkaELBJq4zCowrZeys5njBE0vJ1kvokT4SMlvYeQ/rPgGtHoJjX+MnuAwvKRERVPzb4pMhTO/cb0Q3msa74DR8H0qmcnwOcw6e5w3Jlyd8OvR7jAvxg5+szJarP+JbIV7a+67FdUdeW2PPFPenIzW/wvTPRTVWoOqHNbBAhfd8vC5inzyv+ppM6lMy07EQ8mx/7SklnoW2/aDfuHS/uRjqETJEdYoyfP701PehMrfgNlEvcNV/p/O1iEJIbL6qIqiN7Hzkdy8RHjh5zzXc5+qgFSaiJRqLrar7B07YC67wYHxMDdpB/z3euq5zAG8=
+      - secure: REkp/aY2asOxYvz6maEE3P3C5XjnJ6rpuXOHtDYzSSHrbNoDvIXhl6t0o8QMH2KyMvvveednw2ebDwTBfT732z40vflrY8uBnwTvHB9EGbLJP2IhQKy/n+m6qUUZgmaGs2w011XKTAT5Us/jFwcdvMTjqwPRvOSwwTHcQIrFTOho+c5nz4tW8xFnSHgFhm6cM4PiL+GiErWmy9rgZO0uC99+pH78shIBCFBC1hD/XzTA/gphn44FUcDO6Gq8pbPJnFj+VrDPRrY90xrNVpnoCiX6DOWyI89wplzDmNRpam5Iu/B/coXVH6P9ljqgN+cchVulb+1KycB4OiYxubvRyHidR9IRJ3xmlQ1TQHeYNh73kyx2si2mwYSjU141VZMRM1bojnRdOlkyNRMieeVhlvOambuuRFCSmX20yfy00v4iLjjJGKbMlHOvK0+bkFLBiXUzdX+W8nrY6AyOF1ulh3MHycVGVzrNtykzulUkMYUvCJIg4XefRb8n0w3xRCQi5y1q2d1k7YQ46X+Ei0/HvfwdqmcqfVLts9p+XC+5zaaUzWHv7V0Crq8ZdWcKQktm/VYdsWguVC18WqzrccoIy+HPeLZ28P7AQiA98UuYZr/qMlLapFxUdF4cn08/BNixqAKy/FoI01eNsg+j97pPKpuLmh556PYEx0yxr+HADhc=
