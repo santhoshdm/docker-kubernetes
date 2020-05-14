@@ -12,7 +12,8 @@ before_install:
   - gcloud components update kubectl
   #- gcloud auth revoke
   - gcloud auth activate-service-account --key-file service-account.json
-  - export GOOGLE_APPLICATION_CREDENTIALS=service-account.json
+  - export GOOGLE_APPLICATION_CREDENTIALS="service-account.json"
+  - gcloud config set container/use_client_certificate True
   #- gcloud services enable container.googleapis.com
   - gcloud config set project react-kubernetes-cluster
   - gcloud config set compute/zone us-central1-c
